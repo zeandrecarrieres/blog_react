@@ -1,24 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import AddPost from './components/AddPost';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+
+const routes = [
+  { path: "/", name: "Home", Component: Home },
+  { path: "/contact", name: "Contact", Component: Contact },
+  { path: "/addpost", name: "AddPost", Component:AddPost}
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <Router>
+        <Header />
+        <Navbar />
+      
+
+        <Switch>
+          {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path}>
+              {({ match }) => (
+                <Component />
+              )}
+            </Route>
+          ))}
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/contact" component={Contact}></Route>
+        </Switch>
+
+
+
+      </Router>
+
+ 
+
     </div>
+
   );
 }
 

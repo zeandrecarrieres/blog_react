@@ -1,38 +1,219 @@
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100%;
+  background-image: url('https://smartaccess.bircher.com/fileadmin/user_upload/bbcgroup.biz/site/smart-access/images/used/005-Technologie/5.0_technologie_innovation.jpg');
+  background-position: cover;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 25vh;
+  font-size: 2rem;
+}
+
+.container h1{
+  color: rgb(251, 251, 251);
+}
+
+.navbar {
+  display: flex;
+  background: rgb(61, 61, 61);
+  justify-content: center;
+  height: 5vh;
+  align-items: center;
+
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.logo {
+  margin-left: 10rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu {
+  display: flex;
+  margin-right: 10rem;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu ul {
+  display: flex;
+}
+
+.menu ul li{
+  color: white;
+  margin-left: 2rem;
+}
+
+.nav-link a{
+  color: white;
+}
+
+.nav-link a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+.aside {
+  display: flex;
+  background-color: rgb(243, 243, 243);
+  width: 10vw;
+  height: 70vh;
+  justify-content: center;
+}
+
+.aside ul {
+  margin: 5rem 0;
+}
+
+.aside ul li {
+  margin: 1rem 0;  
+}
+
+.aside ul li:hover{
+  margin: 1rem 0; 
+  text-decoration: underline; 
+}
+
+
+
+.main {
+  display: flex;
+}
+
+.home-main {
+  flex: 1;
+}
+
+.home-main h2 {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin: 0 auto ;
+  justify-content: center;
+
+}
+
+.form-group input, textarea {
+  width: 90%;
+  padding: .8rem;
+  border-radius: .5rem;
+  background-color: white;
+  border: 0;
+  margin-top: 0.5rem;
+
+}
+
+label {
+  font-size: .8rem;
+}
+
+#message {
+  height: 15rem;
+ 
+ 
+}
+
+.send-btn {
+  width: 10rem;
+  background: rgb(206, 206, 206);
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border: 0;
+}
+
+.send-btn:hover {
+  background: rgb(140, 250, 244);
+
+}
+
+.text {
+  max-width: 50rem;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-image {
+  max-height: 40rem;
+  width: ;
+}
+
+.add-post {
+  width: 10rem;
+  padding: 1rem;
+  background: grey;
+  color: white ;
+  font-size: 1.2rem;
+}
+
+.add-btn {
+  width: 10rem;
+  background: rgb(206, 206, 206);
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  border: none;
+
+}
+
+.add-btn:hover {
+  background: rgb(140, 250, 244);
+
+}
+
+.addpost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addpost h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.addpost button{
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+#post-text {
+  height: 15rem;
 }
